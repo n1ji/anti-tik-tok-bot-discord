@@ -1,9 +1,49 @@
-# anti-tik-tok-bot-discord
+# Anti TikTok Bot (Discord)
 
-this bot is especially usefull if you have a friend which sendt you tik toks through discord instead of the tik tok app.
-this bot not only deletes the links but also adds them into the txt file that is provided with the script.
-if any questions or problems arise send them into issues tab in the repository i will try to check them every week or so.
+A small Discord bot for servers where a friend keeps sending TikTok links in chat. It removes the link from the conversation, reposts it in a dedicated channel, and keeps a log of everything it has caught.
 
-tutorial is in the tutorial file lower
+## What it does
 
-made by plaui
+When someone posts a TikTok link (`tiktok.com` or `vm.tiktok.com`), the bot:
+
+1. Saves the message with a timestamp to `tiktok_urls.txt`
+2. Posts the link into your links channel (`TARGET_CHANNEL_ID`)
+3. Deletes the original message
+
+Only messages sent while the script is running are handled.
+
+## Requirements
+
+- Python 3
+- [discord.py](https://pypi.org/project/discord.py/): `pip install discord.py`
+- A Discord bot token from the [Discord Developer Portal](https://discord.com/developers/applications)
+
+## Setup
+
+1. Create an application in the Developer Portal, open the **Bot** tab and click **Reset Token**. Copy the token.
+2. On the same tab, enable the **Message Content Intent**. The bot needs it to read links.
+3. In `anti tik tok bot.py`, fill in the three settings at the top:
+
+   | Setting | What to put there |
+   |---|---|
+   | `BOT_TOKEN` | Your bot token |
+   | `TARGET_CHANNEL_ID` | ID of the channel where caught TikTok links are reposted |
+   | `DELETE_CHANNEL_ID` | ID of your main channel (set it for deletion of the original messages to work) |
+
+   To get a channel ID, enable Developer Mode in Discord, right-click the channel and choose **Copy Channel ID**.
+4. Invite the bot to your server through the **OAuth2** tab. Give it permission to read messages, send messages and **Manage Messages** (needed to delete).
+5. Run it:
+
+   ```bash
+   python "anti tik tok bot.py"
+   ```
+
+A step-by-step guide with screenshots is in [`tutorial.docx`](tutorial.docx).
+
+> **Keep your token private.** Never commit your real `BOT_TOKEN` to GitHub. If it leaks, reset it in the Developer Portal.
+
+## Issues
+
+Questions or problems? Open an [issue](https://github.com/plaui228/anti-tik-tok-bot-discord/issues). They are checked about once a week.
+
+Made by Plaui.
