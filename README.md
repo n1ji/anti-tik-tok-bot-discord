@@ -44,6 +44,6 @@ A step-by-step guide with screenshots is in [`tutorial.docx`](tutorial.docx).
 
 ## Issues
 
-Questions or problems? Open an [issue](https://github.com/plaui228/anti-tik-tok-bot-discord/issues). They are checked about once a week.
+Questions or problems? Open an [issue](https://github.com/n1ji/anti-tik-tok-bot-discord/issues). They are checked about once a week.
 
-Made by Plaui.
+Made by n1ji (plaui).
