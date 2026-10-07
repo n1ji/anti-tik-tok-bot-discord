@@ -43,7 +43,7 @@ Only messages sent while the script is running are handled.
    python "anti tik tok bot.py"
    ```
 
-A step-by-step guide with screenshots is in [`tutorial.docx`](tutorial.docx).
+An older step-by-step guide with screenshots is in [`outdated/tutorial.docx`](outdated/tutorial.docx). It describes the previous setup (token and channel IDs inside the script), so follow the steps above instead.
 
 > **Keep your token private.** Never commit your real bot token to GitHub. If it leaks, reset it in the Developer Portal.
 
